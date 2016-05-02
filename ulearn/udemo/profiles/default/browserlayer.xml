@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+    name="ulearn.udemo"
+    interface="ulearn.udemo.interfaces.IUlearnUdemoLayer"
+  />
+</layers>

@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="genweb.portlets">
+
+    <include package="plone.app.portlets"  />
+
+    <plone:portlet
+        name="ulearn.portlets.flashesinformativos"
+        interface=".flashesinformativos.flashesinformativos.IFlashesInformativosPortlet"
+        assignment=".flashesinformativos.flashesinformativos.Assignment"
+        renderer=".flashesinformativos.flashesinformativos.Renderer"
+        addview=".flashesinformativos.flashesinformativos.AddForm"
+        editview=".flashesinformativos.flashesinformativos.EditForm"
+        />
+
+</configure>
