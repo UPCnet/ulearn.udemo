@@ -31,10 +31,12 @@ setup(name='ulearn.udemo',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'bleach==1.4',
+          'bs4',
       ],
       extras_require={'test': ['plone.app.testing',
                                'plone.app.testing[robot]>=4.2.2',
-                               'plone.app.robotframework[debug]',]},
+                               'plone.app.robotframework[debug]', ]},
       entry_points="""
       # -*- Entry points: -*-
       [z3c.autoinclude.plugin]

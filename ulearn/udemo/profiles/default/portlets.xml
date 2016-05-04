@@ -1,5 +1,13 @@
 <?xml version="1.0"?>
 <portlets>
-  <portlet title="Flashes informativos" addview="ulearn.portlets.flashesinformativos"
-     description="Flashes Informativos portlet"/>
+   <portlet title="News Flash" addview="ulearn.portlets.flashesinformativos"
+      description="News Flash portlet"/>
+   <portlet title="My Subjects" addview="ulearn.portlets.mysubjects"
+      description="My Subjects EVA portlet"/>
+   <portlet title="News Important" addview="ulearn.portlets.importantnews"
+      description="News Important portlet"/>
+   <portlet title="News Subscribed with tags" addview="ulearn.portlets.subscribednews"
+      description="News Subscribed with tags"/>
+   <portlet title="Custom Button Bar" addview="ulearn.portlets.custombuttonbar"
+      description="Custom button bar"/>
 </portlets>

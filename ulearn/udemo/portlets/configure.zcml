@@ -6,7 +6,7 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="genweb.portlets">
 
-    <include package="plone.app.portlets"  />
+    <include package="plone.app.portlets"/>
 
     <plone:portlet
         name="ulearn.portlets.flashesinformativos"
@@ -15,6 +15,40 @@
         renderer=".flashesinformativos.flashesinformativos.Renderer"
         addview=".flashesinformativos.flashesinformativos.AddForm"
         editview=".flashesinformativos.flashesinformativos.EditForm"
-        />
+    />
+
+    <plone:portlet
+        name="ulearn.portlets.mysubjects"
+        interface=".mysubjects.mysubjects.IMySubjectsPortlet"
+        assignment=".mysubjects.mysubjects.Assignment"
+        renderer=".mysubjects.mysubjects.Renderer"
+        addview=".mysubjects.mysubjects.AddForm"
+    />
+
+    <plone:portlet
+        name="ulearn.portlets.importantnews"
+        interface=".importantnews.importantnews.IImportantNewsPortlet"
+        assignment=".importantnews.importantnews.Assignment"
+        renderer=".importantnews.importantnews.Renderer"
+        addview=".importantnews.importantnews.AddForm"
+        editview=".importantnews.importantnews.EditForm"
+    />
+
+    <plone:portlet
+        name="ulearn.portlets.subscribednews"
+        interface=".subscribednews.subscribednews.ISubscribedNewsPortlet"
+        assignment=".subscribednews.subscribednews.Assignment"
+        renderer=".subscribednews.subscribednews.Renderer"
+        addview=".subscribednews.subscribednews.AddForm"
+        editview=".subscribednews.subscribednews.EditForm"
+    />
+
+    <plone:portlet
+        name="ulearn.portlets.custombuttonbar"
+        interface=".custombuttonbar.custombuttonbar.ICustomButtonBarPortlet"
+        assignment=".custombuttonbar.custombuttonbar.Assignment"
+        renderer=".custombuttonbar.custombuttonbar.Renderer"
+        addview=".custombuttonbar.custombuttonbar.AddForm"
+    />
 
 </configure>
