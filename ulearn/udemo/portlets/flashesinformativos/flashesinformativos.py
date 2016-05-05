@@ -10,7 +10,7 @@ from plone.app.portlets.portlets import base
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.utils import getToolByName
 
-from ulearn.blanquerna import _
+from ulearn.udemo import _
 from zope import schema
 from zope.formlib import form
 from DateTime.DateTime import DateTime

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<object name="privateFolder" meta_type="Dexterity FTI" i18n:domain="ulearn"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+ <property name="filter_content_types">True</property>
+ <property name="allowed_content_types">
+  <element value="Banner"/>
+  <element value="Collection"/>
+  <element value="Document"/>
+  <element value="File"/>
+  <element value="Flash_informativo"/>
+  <element value="Folder"/>
+  <element value="FormFolder"/>
+  <element value="Image"/>
+  <element value="privateFolder"/>
+  <element value="ulearn.video"/>
+  <element value="ulearn.video_embed"/>
+ </property>
+ <property name="default_view">listing_view</property>
+ <property name="view_methods">
+  <element value="listing_view"/>
+  <element value="folder_extended"/>
+  <element value="album_view"/>
+  <element value="summary_view"/>
+  <element value="tabular_view"/>
+  <element value="full_view"/>
+  <element value="filtered_contents_search_view"/>
+  <element value="contents_pretty_view"/>
+ </property>
+ <property name="behaviors">
+  <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
+  <element value="plone.app.content.interfaces.INameFromTitle"/>
+  <element value="plone.app.dexterity.behaviors.discussion.IAllowDiscussion"/>
+  <element
+     value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
+  <element value="plone.app.dexterity.behaviors.id.IShortName"/>
+  <element
+     value="Products.CMFPlone.interfaces.constrains.ISelectableConstrainTypes"/>
+  <element value="plone.app.relationfield.behavior.IRelatedItems"/>
+  <element
+     value="plone.app.dexterity.behaviors.nextprevious.INextPreviousToggle"/>
+  <element value="plone.app.lockingbehavior.behaviors.ILocking"/>
+ </property>
+</object>

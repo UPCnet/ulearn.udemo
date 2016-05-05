@@ -42,3 +42,119 @@
 .icon-plone-contentmenu-display-summary_view_news             { background-position: -360px -169px; }
 
 /* =========== FIN Vista summary_view_news =========== */
+
+/* =========== Vista contents_pretty_view =========== */
+
+
+.template-listing_view #content .contenttype-folder:before, .template-listing_view #content .contenttype-privatefolder:before, .template-contents_pretty_view #content .contenttype-privatefolder:before, .template-contents_pretty_view #content .contenttype-folder:before {
+  content: "\f114";
+  font-family: FontAwesome;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  margin-right: 7px;
+}
+
+.template-listing_view #content .contenttype-file:before, .template-contents_pretty_view #content .contenttype-file:before {
+  content: "\f1c1";
+  font-family: FontAwesome;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  margin-right: 7px;
+}
+
+.template-listing_view #content .contenttype-link:before, .template-contents_pretty_view #content .contenttype-link:before {
+  content: "\f0c1";
+  font-family: FontAwesome;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  margin-right: 7px;
+}
+
+.template-listing_view #content .contenttype-link_pie:before, .template-contents_pretty_view #content .contenttype-link_pie:before {
+  content: "\f0c1";
+  font-family: FontAwesome;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  margin-right: 7px;
+}
+
+.template-listing_view #content .contenttype-image:before, .template-contents_pretty_view #content .contenttype-image:before {
+  content: "\f1c5";
+  font-family: FontAwesome;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  margin-right: 7px;
+}
+
+.template-listing_view #content .contenttype-document:before, .template-contents_pretty_view #content .contenttype-document:before {
+  content: "\f0f6";
+  font-family: FontAwesome;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  margin-right: 7px;
+}
+
+.template-contents_pretty_view .vistaquadricula .span6 {
+  margin-left:0;
+}
+
+.vistaquadricula p {
+  color: #777;
+  font-size: 12.4px;
+  font-weight: 600;
+  line-height: 15px;
+  font-weight: normal;
+}
+
+.vistaquadricula p a {
+  color: #b5c035;
+}
+
+.vistaquadricula .fa, .vistaquadricula .icon:before {
+  color: #b5c035;
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+i.icon-plone-contentmenu-display-contents_pretty_view, i.icon-folder-contents_pretty_view {
+  background-position: -215px -1px;
+}
+
+.secciofolders {
+  font-size: 12px;
+}
+
+.secciofolders {
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.secciofolders {
+  list-style-type: none;
+  margin-bottom: 6px;
+  line-height: 15px;
+}
+
+.secciofolders .fa, .secciofolders .icon:before {
+  color: #b5c035;
+  font-size: 13px !important;
+  margin-right: 4px;
+}
+.secciofolders .span12 {
+    margin: 0;
+    min-height: 25px;
+}
+
+/* =========== FIN Vista contents_pretty_view =========== */

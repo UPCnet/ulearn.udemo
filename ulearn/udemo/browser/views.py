@@ -1,4 +1,9 @@
+from five import grok
+from plone import api
 from Acquisition import aq_inner
+from zope.interface import Interface
+from ulearn.udemo.interfaces import IUlearnUdemoLayer
+from Products.CMFCore.utils import getToolByName
 from plone.app.contenttypes.browser.folder import FolderView
 from plone.app.contenttypes.behaviors.collection import ICollection
 
@@ -93,3 +98,58 @@ class SummaryViewNews(FolderView):
     def abreviaText(self, item):
         text = self.abrevia(item.text.raw, 180)
         return text
+
+
+class ContentsPrettyView(grok.View):
+    """ Show content in a pretty way for every folder. """
+    grok.name('contents_pretty_view')
+    grok.context(Interface)
+    grok.require('genweb.member')
+    grok.template('contents_pretty')
+    grok.layer(IUlearnUdemoLayer)
+
+    def getItemPropierties(self):
+        all_items = []
+
+        portal = api.portal.get()
+        catalog = getToolByName(portal, 'portal_catalog')
+        path = self.context.getPhysicalPath()
+        path = "/".join(path)
+
+        nElements = 2
+        llistaElements = []
+
+        items = catalog.searchResults(path={'query': path, 'depth': 1},
+                                      sort_on="getObjPositionInParent")
+        all_items += [{'item_title': item.Title,
+                       'item_desc': item.Description[:110],
+                       'item_type': item.portal_type,
+                       'item_url': item.getURL(),
+                       'item_path': item.getPath(),
+                       'item_state': item.review_state,
+                       } for item in items if item.exclude_from_nav is False]
+
+        if len(all_items) > 0:
+            # Retorna una llista amb els elements en blocs de 2 elements
+            llistaElements = [all_items[i:i + nElements] for i in range(0, len(all_items), nElements)]
+        return llistaElements
+
+    def getBlocs(self):
+        llistaElements = self.getItemPropierties()
+        return len(llistaElements)
+
+    def getSubItemPropierties(self, item_path):
+        all_items = []
+        portal = api.portal.get()
+        catalog = getToolByName(portal, 'portal_catalog')
+        path = item_path
+
+        items = catalog.searchResults(path={'query': path, 'depth': 1},
+                                      sort_on="getObjPositionInParent")
+        all_items += [{'item_title': item2.Title,
+                       'item_desc': item2.Description[:120],
+                       'item_type': item2.portal_type,
+                       'item_url': item2.getURL(),
+                       'item_state': item2.review_state
+                       } for item2 in items if item2.exclude_from_nav is False]
+        return all_items

@@ -1,5 +1,5 @@
 <div id="menusup"
-     i18n:domain="udemo">
+     i18n:domain="udemo" ng-non-bindable >
   <nav>
     <div class="row-fluid">
 
@@ -8,7 +8,7 @@
         <div class="bubble-content">
           <a href="#"
              data-toggle="tab"
-             data-target="#corporatiu">
+             data-target="#corporatiu" target="_self">
                 <i class="fa fa-comment icons"></i>
                 <tal:Corporatiu i18n:translate="stream"> Stream </tal:Corporatiu></a>
         </div>
@@ -19,7 +19,7 @@
         <div class="bubble-content">
           <a href="#"
              data-toggle="tab"
-             data-target="#mynews">
+             data-target="#mynews" target="_self">
                 <i class="fa fa-group icons"></i>
                 <tal:Noticies i18n:translate="mynews"> Mis Notícias </tal:Noticies></a>
         </div>
@@ -30,7 +30,7 @@
         <div class="bubble-content">
           <a href="#"
              data-toggle="tab"
-             data-target="#mycommunities">
+             data-target="#mycommunities" target="_self">
                 <i class="fa fa-calendar icons"></i>
                 <tal:Stream i18n:translate="my_communities"> Mis Comunidades </tal:Stream></a>
         </div>
@@ -40,13 +40,8 @@
   </nav>
 </div>
 
-<div class="tab-content">
+<div class="tab-content" ng-non-bindable>
   <div class="tab-pane active" id="corporatiu"></div>
-  <div class="tab-pane" id="noticies"></div>
- <div class="tab-pane" id="events"></div>
+  <div class="tab-pane" id="mynews"></div>
+ <div class="tab-pane" id="mycommunities"></div>
 </div>
-
-<span tal:condition="view/isDevelopmentMode">
-  <script src="++ulearn++portlets/custombuttonbar/custombuttonbar.js"></script>
-  <!-- <link rel="stylesheet" href="++ulearn++portlets/custombuttonbar/custombuttonbar.css" type="text/css" media="screen" />-->
-</span>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<object name="Folder" meta_type="Dexterity FTI" i18n:domain="plone"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+ <property name="description" i18n:translate="">Add a new folder</property>
+ <property name="default_view">listing_view</property>
+ <property name="view_methods">
+  <element value="listing_view"/>
+  <element value="folder_extended"/>
+  <element value="album_view"/>
+  <element value="summary_view"/>
+  <element value="tabular_view"/>
+  <element value="full_view"/>
+  <element value="filtered_contents_search_view"/>
+  <element value="contents_pretty_view"/>
+ </property>
+ <property name="allowed_content_types">
+  <element value="Banner"/>
+  <element value="Collection"/>
+  <element value="Document"/>
+  <element value="Event"/>
+  <element value="File"/>
+  <element value="Folder"/>
+  <element value="Image"/>
+  <element value="Link"/>
+  <element value="ulearn.community"/>
+  <element value="ulearn.discussion"/>
+  <element value="ulearn.video"/>
+  <element value="FormFolder"/>
+ </property>
+ <property name="behaviors">
+  <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
+  <element value="plone.app.content.interfaces.INameFromTitle"/>
+  <element value="plone.app.dexterity.behaviors.discussion.IAllowDiscussion"/>
+  <element
+     value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
+  <element
+     value="Products.CMFPlone.interfaces.constrains.ISelectableConstrainTypes"/>
+  <element value="plone.app.relationfield.behavior.IRelatedItems"/>
+  <element
+     value="plone.app.dexterity.behaviors.nextprevious.INextPreviousToggle"/>
+  <element value="plone.app.lockingbehavior.behaviors.ILocking"/>
+ </property>
+</object>
