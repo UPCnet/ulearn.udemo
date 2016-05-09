@@ -16,7 +16,6 @@ from plone.app.portlets.portlets import base
 from zope.component.hooks import getSite
 from plone.memoize.view import memoize_contextless
 from DateTime.DateTime import DateTime
-import Globals
 
 
 class IImportantNewsPortlet(IPortletDataProvider):
@@ -159,8 +158,6 @@ class Renderer(base.Renderer):
 
         return bb
 
-    def isDevelopmentMode(self):
-        return Globals.DevelopmentMode
 
 class AddForm(base.AddForm):
     form_fields = form.Fields(IImportantNewsPortlet)

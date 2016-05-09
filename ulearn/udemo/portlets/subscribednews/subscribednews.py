@@ -171,9 +171,6 @@ class Renderer(base.Renderer):
 
         return bb
 
-    def isDevelopmentMode(self):
-        return Globals.DevelopmentMode
-
 
 class AddForm(base.AddForm):
     form_fields = form.Fields(ISubscribedNewsPortlet)

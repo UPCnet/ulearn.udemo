@@ -14,7 +14,6 @@ from ulearn.udemo import _
 from zope import schema
 from zope.formlib import form
 from DateTime.DateTime import DateTime
-import Globals
 import bleach
 import bs4
 import re
@@ -180,9 +179,6 @@ class Renderer(base.Renderer):
     def get_flashesinformatius_folder_url(self):
         url = self.portal().absolute_url() + '/gestion/flashes_informativos'
         return url
-
-    def isDevelopmentMode(self):
-        return Globals.DevelopmentMode
 
 
 class AddForm(base.AddForm):

@@ -6,8 +6,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFPlone import PloneMessageFactory as _
 
 import requests
-import json
-import Globals
+
 
 class IMySubjectsPortlet(IPortletDataProvider):
     """ A portlet which can show actived.
@@ -43,8 +42,6 @@ class Renderer(base.Renderer):
         userSubjects = {"teacherCourses":[{"name":"Espai personal Test Blink","link":"http:\\/\\/eva.blanquerna.edu\\/course\\/view.php?id=5092","activities":[],"alerts":0},{"name":"Formaci\\u00f3 EVA per FPCEE","link":"http:\\/\\/eva.blanquerna.edu\\/course\\/view.php?id=1153","activities":[{"name":"Tasca","link":"http:\\/\\/eva.blanquerna.edu\\/local\\/blanquerna\\/blanquernaActivities.php?id=c4f8635f&amp;idUser=c2f9615d&amp;module=94ba2505105d&amp;items=ccf86f4046027962","pending":2}],"alerts":2}],"studentCourses":[{"name":"Formaci\\u00f3 EVA per FCS","link":"http:\\/\\/eva.blanquerna.edu\\/course\\/view.php?id=1152","activities":[{"name":"Tasca","link":"http:\\/\\/eva.blanquerna.edu\\/local\\/blanquerna\\/blanquernaActivities.php?id=c4f8635e&amp;idUser=c2f9615d&amp;module=94ba2505105d&amp;items=c4fb645d","pending":1}],"alerts":1}]}
         return userSubjects
 
-    def isDevelopmentMode(self):
-        return Globals.DevelopmentMode
 
 class AddForm(base.NullAddForm):
 

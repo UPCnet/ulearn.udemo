@@ -6,6 +6,7 @@ $(document).ready(function (event) {
   // Cuando clicamos a la paginación de noticias,
   if(window.location.href.indexOf("b_start") > -1){
     $('#maxui-widget-container').hide();
+		$('.portlet-mycommunities').hide();
     $('.portlet-subscribed-news').show();
 
     $('#menusup .active').removeClass('active');
@@ -16,14 +17,17 @@ $(document).ready(function (event) {
 	$('.portaltype-plone-site a[data-target="#corporatiu"]').on('show', function (e) {
 	  $('#maxui-widget-container').show();
     $('.portlet-subscribed-news').hide();
+		$('.portlet-mycommunities').hide();
 	});
 
 	$('.portaltype-plone-site a[data-target="#mynews"]').on('show', function (e) {
 	  $('.portlet-subscribed-news').show();
 	  $('#maxui-widget-container').hide();
+		$('.portlet-mycommunities').hide();
 	});
 
-	$('.portaltype-plone-site a[data-target="#mycomunities"]').on('show', function (e) {
+	$('.portaltype-plone-site a[data-target="#mycommunities"]').on('show', function (e) {
+		$('.portlet-mycommunities').show();
 	  $('.portlet-subscribed-news').hide();
 	  $('#maxui-widget-container').hide();
 	});

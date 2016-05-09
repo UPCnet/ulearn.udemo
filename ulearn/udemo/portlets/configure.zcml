@@ -51,4 +51,12 @@
         addview=".custombuttonbar.custombuttonbar.AddForm"
     />
 
+    <plone:portlet
+        name="ulearn.portlets.mycommunities"
+        interface=".mycommunities.mycommunities.IMyCommunitiesPortlet"
+        assignment=".mycommunities.mycommunities.Assignment"
+        renderer=".mycommunities.mycommunities.Renderer"
+        addview=".mycommunities.mycommunities.AddForm"
+    />
+
 </configure>

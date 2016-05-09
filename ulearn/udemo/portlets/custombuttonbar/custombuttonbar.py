@@ -14,7 +14,6 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from Products.CMFPlone import PloneMessageFactory as _
 from zope.component.hooks import getSite
-import Globals
 
 
 class ICustomButtonBarPortlet(IPortletDataProvider):
@@ -53,9 +52,6 @@ class Renderer(base.Renderer):
         """
         lt = getToolByName(self.portal(), 'portal_languages')
         return lt.getPreferredLanguage()
-
-    def isDevelopmentMode(self):
-        return Globals.DevelopmentMode
 
 
 class AddForm(base.NullAddForm):
