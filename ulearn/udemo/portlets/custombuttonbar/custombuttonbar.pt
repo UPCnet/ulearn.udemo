@@ -45,3 +45,7 @@
   <div class="tab-pane" id="mynews"></div>
  <div class="tab-pane" id="mycommunities"></div>
 </div>
+
+<span tal:condition="context/@@genweb.utils/is_debug_mode">
+  <script src="++ulearn++portlets/custombuttonbar/custombuttonbar.js"></script>
+</span>
