@@ -2,8 +2,9 @@
 	 class="ulearnbox"
 	 i18n:domain="blanquerna"
      tal:define="subjects view/getSubjects;
-	    		 subjects_student python:subjects['studentCourses'];
-	      	 	 subjects_teacher python:subjects['teacherCourses']">
+	    		       subjects_student python:subjects['studentCourses'];
+	      	 	     subjects_teacher python:subjects['teacherCourses'];
+						     primary_color view/getPrimaryColor">
     <div class="osomcorner-wrapper"><div class="osomcorner"></div></div>
 
 	<ul class="nav nav-stacked" id="accordion_portlet">
@@ -32,8 +33,11 @@
 									   data-parent="#accordion"
 	                                   tal:attributes="href string:#${id_subject}"
 	                                   i18n:attributes="title label_info_tasks">
-								    	    <div class="bubble left subject-alert">
-												<div class="arrow"></div>
+								    	<div class="bubble left subject-alert"
+													 tal:attributes="style string:background-color:${primary_color}">
+
+													 <div class="arrow2"
+		 												   tal:attributes="style string:background-color:${primary_color}"></div>
 												<div class="bubble-content"></div>
 											</div>
 									</a>
@@ -41,7 +45,7 @@
 						    	    <tal:haveNews condition="python:subject_haveNews<1">
 						    	    	<a>
 								    	    <div class="bubble left subject-no-alert">
-												<div class="arrow"></div>
+												  <div class="arrow"></div>
 												<div class="bubble-content"></div>
 											</div>
 										</a>
@@ -86,8 +90,10 @@
                                    tal:attributes="href string:#${id_subject}"
                                    i18n:attributes="title label_info_tasks">
 
-							    	    <div class="bubble left subject-alert">
-											<div class="arrow"></div>
+							    	    <div class="bubble left subject-alert"
+														 tal:attributes="style string:background-color:${primary_color}">
+											<div class="arrow2"
+												   tal:attributes="style string:background-color:${primary_color}"></div>
 											<div class="bubble-content"></div>
 								    </div>
 								</a>

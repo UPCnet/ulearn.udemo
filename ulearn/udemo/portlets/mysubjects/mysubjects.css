@@ -86,7 +86,6 @@ height: 35px!important; float: left;}
 .bubble-content::before{
     font-family:FontAwesome;
     color:#fff;
-    background-color: #A30000;
     content:"\f071";}
 
 .bubble.left.subject-no-alert
@@ -132,7 +131,8 @@ height: 35px!important; float: left;}
 
 .subject-alert{
     background-clip: padding-box;
-    background-color: #A30000;}
+    position: relative;
+  }
 .subject-no-alert{
     background-clip: padding-box;
     background-color: #B5B5B5;}
@@ -159,4 +159,15 @@ ul#accordion li.panel.subject a  span {
 
 .link_blank {
     display: none;
+}
+
+.arrow2 {
+    float: right;
+    height: 15px;
+    position: absolute;
+    right: -6px;
+    top: 30%;
+    transform: rotate(45deg);
+    width: 15px;
+    z-index: -1;
 }

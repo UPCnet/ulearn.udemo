@@ -4,7 +4,9 @@ from plone.portlets.interfaces import IPortletDataProvider
 from plone.app.portlets.portlets import base
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFPlone import PloneMessageFactory as _
-
+from zope.component import queryUtility
+from plone.registry.interfaces import IRegistry
+from ulearn.core.controlpanel import IUlearnControlPanelSettings
 import requests
 
 
@@ -39,8 +41,15 @@ class Renderer(base.Renderer):
                             data=payload,
                             verify=False)
         # userSubjects = json.loads(req.json())
-        userSubjects = {"teacherCourses":[{"name":"Espai personal Test Blink","link":"http:\\/\\/eva.blanquerna.edu\\/course\\/view.php?id=5092","activities":[],"alerts":0},{"name":"Formaci\\u00f3 EVA per FPCEE","link":"http:\\/\\/eva.blanquerna.edu\\/course\\/view.php?id=1153","activities":[{"name":"Tasca","link":"http:\\/\\/eva.blanquerna.edu\\/local\\/blanquerna\\/blanquernaActivities.php?id=c4f8635f&amp;idUser=c2f9615d&amp;module=94ba2505105d&amp;items=ccf86f4046027962","pending":2}],"alerts":2}],"studentCourses":[{"name":"Formaci\\u00f3 EVA per FCS","link":"http:\\/\\/eva.blanquerna.edu\\/course\\/view.php?id=1152","activities":[{"name":"Tasca","link":"http:\\/\\/eva.blanquerna.edu\\/local\\/blanquerna\\/blanquernaActivities.php?id=c4f8635e&amp;idUser=c2f9615d&amp;module=94ba2505105d&amp;items=c4fb645d","pending":1}],"alerts":1}]}
+        userSubjects = {"teacherCourses": [{"name": "Espai personal Test Blink", "link": "http:\\/\\/eva.blanquerna.edu\\/course\\/view.php?id=5092","activities":[],"alerts":0},
+                                           {"name": "Formaci\\u00f3 EVA per FPCEE", "link": "http:\\/\\/eva.blanquerna.edu\\/course\\/view.php?id=1153","activities":[{"name":"Tasca","link":"http:\\/\\/eva.blanquerna.edu\\/local\\/blanquerna\\/blanquernaActivities.php?id=c4f8635f&amp;idUser=c2f9615d&amp;module=94ba2505105d&amp;items=ccf86f4046027962","pending":2}],"alerts":2}],
+                        "studentCourses": [{"name": "Formaci\\u00f3 EVA per FCS", "link": "http:\\/\\/eva.blanquerna.edu\\/course\\/view.php?id=1152","activities":[{"name":"Tasca","link":"http:\\/\\/eva.blanquerna.edu\\/local\\/blanquerna\\/blanquernaActivities.php?id=c4f8635e&amp;idUser=c2f9615d&amp;module=94ba2505105d&amp;items=c4fb645d","pending":1}],"alerts":1}]}
         return userSubjects
+
+    def getPrimaryColor(self):
+        registry = queryUtility(IRegistry)
+        settings = registry.forInterface(IUlearnControlPanelSettings)
+        return settings.main_color
 
 
 class AddForm(base.NullAddForm):
