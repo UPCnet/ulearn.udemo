@@ -8,13 +8,33 @@ from zope.security import checkPermission
 from plone.app.contenttypes.interfaces import INewsItem
 from plone.app.layout.viewlets.interfaces import IAboveContentTitle
 from plone.memoize.view import memoize_contextless
-
+from genweb.core.browser.viewlets import gwJSViewletManager, gwCSSViewletManager
+from genweb.core.browser.viewlets import baseResourcesViewlet
 from ulearn.udemo.interfaces import IUlearnUdemoLayer
 from Products.CMFCore.utils import getToolByName
 from genweb.core.adapters import IImportant
 from genweb.core.utils import genweb_config
 
 grok.context(Interface)
+
+
+class gwCSSViewlet(baseResourcesViewlet):
+    """ This is the CSS viewlet for Genweb """
+    grok.context(Interface)
+    grok.viewletmanager(gwCSSViewletManager)
+    grok.layer(IUlearnUdemoLayer)
+
+    resource_type = 'css'
+    current_egg_name = 'genweb.udemo'
+
+
+class gwJSViewlet(baseResourcesViewlet):
+    grok.context(Interface)
+    grok.viewletmanager(gwJSViewletManager)
+    grok.layer(IUlearnUdemoLayer)
+
+    resource_type = 'js'
+    current_egg_name = 'ulearn.udemo'
 
 
 class viewletBase(grok.Viewlet):

@@ -71,7 +71,9 @@
           "../ulearn.js/ulearn/js/components/angular-maxclient/MAXClient.js",
           "../ulearn.js/ulearn/js/components/angular-maxclient/MAXUtils.js",
           "../ulearn.blanquerna/ulearn/blanquerna/resources/blanquernaTheme.js",
-          "../ulearn.udemo/ulearn/udemo/portlets/custombuttonbar/custombuttonbar.js"
+          "../ulearn.udemo/ulearn/udemo/portlets/custombuttonbar/custombuttonbar.js",
+          "../ulearn.udemo/ulearn/udemo/portlets/flashesinformativos/flashesinformativos.js",
+          "../ulearn.udemo/ulearn/udemo/portlets/mysubjects/mysubjects.js"
         ],
         "production": [
           "../genweb.cdn/genweb/cdn/dist/ulearn.udemo.js"
