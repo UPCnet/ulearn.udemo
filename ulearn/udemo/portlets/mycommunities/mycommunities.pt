@@ -1,5 +1,5 @@
 <div class="ulearnbox portlet-mycommunities">
-  aaaaaaaaaaaa
+  
   <div id="communities-view" ng-controller="AllCommunities as ctrl">
      <section id="communitylist">
        <ul>

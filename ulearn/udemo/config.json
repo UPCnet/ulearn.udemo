@@ -95,7 +95,7 @@
     "../ulearn.udemo/ulearn/udemo/portlets": "++ulearn++portlets"
   },
   "revision_info": {
-    "../genweb.cdn/genweb/cdn/dist/ulearn.common.js": "../genweb.cdn/genweb/cdn/dist/ulearn.common.99bb5666.js",
-    "../genweb.cdn/genweb/cdn/dist/ulearn.udemo.js": "../genweb.cdn/genweb/cdn/dist/ulearn.udemo.5b19ebd5.js"
+    "../genweb.cdn/genweb/cdn/dist/ulearn.common.js": "../genweb.cdn/genweb/cdn/dist/ulearn.common.ee992df8.js",
+    "../genweb.cdn/genweb/cdn/dist/ulearn.udemo.js": "../genweb.cdn/genweb/cdn/dist/ulearn.udemo.e3f8893c.js"
   }
 }
