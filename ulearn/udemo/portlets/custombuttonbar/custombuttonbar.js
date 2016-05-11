@@ -3,6 +3,7 @@ $(document).ready(function (event) {
   // Escondemos los componentes al cargar la pagina
 
 	$('.portlet-subscribed-news').hide();
+	$('.portlet-mycommunities').hide();
   // Cuando clicamos a la paginación de noticias,
   if(window.location.href.indexOf("b_start") > -1){
     $('#maxui-widget-container').hide();

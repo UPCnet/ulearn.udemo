@@ -18,14 +18,14 @@ from genweb.core.utils import genweb_config
 grok.context(Interface)
 
 
-class gwCSSViewlet(baseResourcesViewlet):
-    """ This is the CSS viewlet for Genweb """
-    grok.context(Interface)
-    grok.viewletmanager(gwCSSViewletManager)
-    grok.layer(IUlearnUdemoLayer)
-
-    resource_type = 'css'
-    current_egg_name = 'genweb.udemo'
+# class gwCSSViewlet(baseResourcesViewlet):
+#    """ This is the CSS viewlet for Genweb """
+#    grok.context(Interface)
+#    grok.viewletmanager(gwCSSViewletManager)
+#    grok.layer(IUlearnUdemoLayer)
+#
+#    resource_type = 'css'
+#    current_egg_name = 'ulearn.udemo'
 
 
 class gwJSViewlet(baseResourcesViewlet):

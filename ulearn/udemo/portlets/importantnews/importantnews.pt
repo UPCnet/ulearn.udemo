@@ -4,6 +4,9 @@
                i18n:domain="gebropharma">
 
     <div class="ulearnbox portlet-noticies">
+      <div class="osomcorner-wrapper">
+        <div class="osomcorner"></div>
+      </div>
         <h2 i18n:translate="actualidad">Notícies</h2>
       <!--  <div class="seemore pull-right">
           <a tal:attributes="href string:${view/get_noticias_folder_url}"><i class="fa fa-camera-retro fa-lg"></i><span i18n:translate="seemore"> See more</span>
