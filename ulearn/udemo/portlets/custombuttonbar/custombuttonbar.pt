@@ -21,7 +21,7 @@
              data-toggle="tab"
              data-target="#mynews" target="_self">
                 <i class="fa fa-group icons"></i>
-                <tal:Noticies i18n:translate="mynews"> Mis Notícias </tal:Noticies></a>
+                <tal:Noticies i18n:translate="mynews"> Mis Noticias </tal:Noticies></a>
         </div>
       </div>
 

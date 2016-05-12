@@ -41,9 +41,9 @@ class Renderer(base.Renderer):
                             data=payload,
                             verify=False)
         # userSubjects = json.loads(req.json())
-        userSubjects = {"teacherCourses": [{"name": "Espai personal Test Blink", "link": "http:\\/\\/eva.blanquerna.edu\\/course\\/view.php?id=5092","activities":[],"alerts":0},
-                                           {"name": "Formaci\\u00f3 EVA per FPCEE", "link": "http:\\/\\/eva.blanquerna.edu\\/course\\/view.php?id=1153","activities":[{"name":"Tasca","link":"http:\\/\\/eva.blanquerna.edu\\/local\\/blanquerna\\/blanquernaActivities.php?id=c4f8635f&amp;idUser=c2f9615d&amp;module=94ba2505105d&amp;items=ccf86f4046027962","pending":2}],"alerts":2}],
-                        "studentCourses": [{"name": "Formaci\\u00f3 EVA per FCS", "link": "http:\\/\\/eva.blanquerna.edu\\/course\\/view.php?id=1152","activities":[{"name":"Tasca","link":"http:\\/\\/eva.blanquerna.edu\\/local\\/blanquerna\\/blanquernaActivities.php?id=c4f8635e&amp;idUser=c2f9615d&amp;module=94ba2505105d&amp;items=c4fb645d","pending":1}],"alerts":1}]}
+        userSubjects = {"teacherCourses": [{"name": "Curso de buenas prácticas", "link": "http://campus.upcnet.es/course/view.php?id=6","activities":[],"alerts":0},
+                                           {"name": "Curso eLearning UPCnet", "link": "http://campus.upcnet.es/course/view.php?id=15","activities":[{"name":"Tasca","link":"http:\\/\\/eva.blanquerna.edu\\/local\\/blanquerna\\/blanquernaActivities.php?id=c4f8635f&amp;idUser=c2f9615d&amp;module=94ba2505105d&amp;items=ccf86f4046027962","pending":2}],"alerts":2}],
+                        "studentCourses": [{"name": "English 2.0", "link": "http://campus.upcnet.es/course/view.php?id=2","activities":[{"name":"Tasca","link":"http:\\/\\/eva.blanquerna.edu\\/local\\/blanquerna\\/blanquernaActivities.php?id=c4f8635e&amp;idUser=c2f9615d&amp;module=94ba2505105d&amp;items=c4fb645d","pending":1}],"alerts":1}]}
         return userSubjects
 
     def getPrimaryColor(self):

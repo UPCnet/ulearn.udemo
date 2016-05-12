@@ -1,6 +1,6 @@
 <div id="box_mysubjects"
 	 class="ulearnbox"
-	 i18n:domain="blanquerna"
+	 i18n:domain="udemo"
      tal:define="subjects view/getSubjects;
 	    		       subjects_student python:subjects['studentCourses'];
 	      	 	     subjects_teacher python:subjects['teacherCourses'];
@@ -59,7 +59,7 @@
 						    			<tal:activ repeat="activity subject/activities">
 							    			<li tal:define="pending activity/pending">
 							    			    <span tal:content="activity/name">
-								             		Link service Blanquerna
+								             		Link service
 								             	</span>
 								             	<tal:badgeOn condition="python:pending>0">
 									             	<span class="badge badge-active" tal:content="activity/pending">
@@ -115,7 +115,7 @@
 						    			<tal:activ repeat="activity subject/activities">
 							    			<li tal:define="pending activity/pending">
 							    			    <span tal:content="activity/name">
-								             		Link service Blanquerna
+								             		Link service 
 								             	</span>
 								             	<tal:badgeOn condition="python:pending>0">
 									             	<span class="badge badge-active" tal:content="activity/pending">

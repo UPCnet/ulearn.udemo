@@ -8,7 +8,7 @@
                            b_start request/b_start | b_start;
                            batch python:Batch(dades_noticies, b_size, int(b_start), orphan=1);"
                tal:condition="news_items"
-               i18n:domain="blanquerna">
+               i18n:domain="udemo">
 
     <div class="ulearnbox portlet-subscribed-news">
         <h2 i18n:translate="actualidad">Notícies</h2>
