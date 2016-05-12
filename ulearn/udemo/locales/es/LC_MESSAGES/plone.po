@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: UlearnBlanquerna\n"
+"POT-Creation-Date: 2008-11-20 09:40\n"
+"PO-Revision-Date: 2010-06-04 11:35+0100\n"
+"Last-Translator: Francisco Gregori <francisco.gregori@upcnet.es>\n"
+"Language-Team: Plone Team@UPCnet <plone.team@upcnet.es>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: es\n"
+"Language-Name: Spanish\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: plone\n"
+
+msgid "label_faculty"
+msgstr "Facultades"
+
+msgid "help_faculty"
+msgstr "Facultades a las que pertenece la noticia"
+
+msgid "label_collective"
+msgstr "Colectivos"
+
+msgid "help_collective"
+msgstr "Colectivos a los que pertenece la noticia"
+
+msgid "Link_Communities"
+msgstr "Enlace Comunidades"
