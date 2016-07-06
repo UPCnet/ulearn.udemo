@@ -9,7 +9,7 @@
     <include package="plone.app.portlets"/>
 
     <plone:portlet
-        name="ulearn.portlets.flashesinformativos"
+        name="uulearn.portlets.flashesinformativos"
         interface=".flashesinformativos.flashesinformativos.IFlashesInformativosPortlet"
         assignment=".flashesinformativos.flashesinformativos.Assignment"
         renderer=".flashesinformativos.flashesinformativos.Renderer"
@@ -18,7 +18,7 @@
     />
 
     <plone:portlet
-        name="ulearn.portlets.mysubjects"
+        name="uulearn.portlets.mysubjects"
         interface=".mysubjects.mysubjects.IMySubjectsPortlet"
         assignment=".mysubjects.mysubjects.Assignment"
         renderer=".mysubjects.mysubjects.Renderer"
@@ -26,7 +26,7 @@
     />
 
     <plone:portlet
-        name="ulearn.portlets.importantnews"
+        name="uulearn.portlets.importantnews"
         interface=".importantnews.importantnews.IImportantNewsPortlet"
         assignment=".importantnews.importantnews.Assignment"
         renderer=".importantnews.importantnews.Renderer"
@@ -35,7 +35,7 @@
     />
 
     <plone:portlet
-        name="ulearn.portlets.subscribednews"
+        name="uulearn.portlets.subscribednews"
         interface=".subscribednews.subscribednews.ISubscribedNewsPortlet"
         assignment=".subscribednews.subscribednews.Assignment"
         renderer=".subscribednews.subscribednews.Renderer"
@@ -44,7 +44,7 @@
     />
 
     <plone:portlet
-        name="ulearn.portlets.custombuttonbar"
+        name="uulearn.portlets.custombuttonbar"
         interface=".custombuttonbar.custombuttonbar.ICustomButtonBarPortlet"
         assignment=".custombuttonbar.custombuttonbar.Assignment"
         renderer=".custombuttonbar.custombuttonbar.Renderer"
@@ -52,7 +52,7 @@
     />
 
     <plone:portlet
-        name="ulearn.portlets.mycommunities"
+        name="uulearn.portlets.mycommunities"
         interface=".mycommunities.mycommunities.IMyCommunitiesPortlet"
         assignment=".mycommunities.mycommunities.Assignment"
         renderer=".mycommunities.mycommunities.Renderer"

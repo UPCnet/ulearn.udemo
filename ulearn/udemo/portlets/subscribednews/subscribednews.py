@@ -94,7 +94,7 @@ class Renderer(base.Renderer):
         path = portal_state.navigation_root_path()
         limit = self.data.count
         state = self.data.state
-        tags = ['Corporatiu', 'Ferrer']
+        tags = ['Corporativo', 'Ferrer', 'Producto']
         news += self.get_news(context, state, path, limit, tags)
         for newObject in news:
             if newObject not in news_filtered and newObject['subject'] is not ():

@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <portlets>
- <portlet title="News Flash" addview="ulearn.portlets.flashesinformativos"
+ <portlet title="News Flash" addview="uulearn.portlets.flashesinformativos"
     description="News Flash portlet"/>
- <portlet title="My Subjects" addview="ulearn.portlets.mysubjects"
+ <portlet title="My Subjects" addview="uulearn.portlets.mysubjects"
     description="My Subjects EVA portlet"/>
- <portlet title="News Important" addview="ulearn.portlets.importantnews"
+ <portlet title="News Important" addview="uulearn.portlets.importantnews"
     description="News Important portlet"/>
- <portlet title="News Subscribed with tags" addview="ulearn.portlets.subscribednews"
+ <portlet title="News Subscribed with tags" addview="uulearn.portlets.subscribednews"
     description="News Subscribed with tags portlet"/>
- <portlet title="Custom ButtonBar" addview="ulearn.portlets.custombuttonbar"
+ <portlet title="Custom ButtonBar" addview="uulearn.portlets.custombuttonbar"
     description="Custom buttonBar portlet "/>
- <portlet title="My Communities" addview="ulearn.portlets.mycommunities"
+ <portlet title="My Communities" addview="uulearn.portlets.mycommunities"
      description="My Communities portlet"/>
 </portlets>

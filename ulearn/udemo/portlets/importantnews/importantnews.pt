@@ -56,7 +56,7 @@
         </ul>
 
         <span tal:condition="context/@@genweb.utils/is_debug_mode">
-      		<link rel="stylesheet" href="++ulearn++portlets/importantnews/importantnews.css" type="text/css" media="screen" />
+      		<link rel="stylesheet" href="++ulearn++uportlets/importantnews/importantnews.css" type="text/css" media="screen" />
       	</span>
 
     </div>

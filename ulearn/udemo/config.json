@@ -93,7 +93,7 @@
     "../ulearn.js/ulearn/js/components": "++components++ulearn",
     "../ulearn.js/ulearn/js/app": "++ulearn++app",
     "../genweb.cdn/genweb/cdn/dist": "++genweb++dist",
-    "../ulearn.udemo/ulearn/udemo/portlets": "++ulearn++portlets"
+    "../ulearn.udemo/ulearn/udemo/portlets": "++ulearn++uportlets"
   },
   "revision_info": {
     "../genweb.cdn/genweb/cdn/dist/ulearn.common.js": "../genweb.cdn/genweb/cdn/dist/ulearn.common.ee992df8.js",

@@ -38,7 +38,7 @@
     <plone:static
         directory="portlets"
         type="ulearn"
-        name="portlets"
+        name="uportlets"
         />
 
     <include package="z3c.jbot" file="meta.zcml" />

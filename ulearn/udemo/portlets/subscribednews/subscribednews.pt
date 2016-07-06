@@ -58,7 +58,7 @@
       <div metal:use-macro="here/batch_macros/macros/navigation" />
     </div>
     <span tal:condition="context/@@genweb.utils/is_debug_mode">
-    <!--  <script src="++ulearn++portlets/subscribednews/subscribednews.js"></script> -->
-       <link rel="stylesheet" href="++ulearn++portlets/subscribednews/subscribednews.css" type="text/css" media="screen" />
+    <!--  <script src="++ulearn++uportlets/subscribednews/subscribednews.js"></script> -->
+       <link rel="stylesheet" href="++ulearn++uportlets/subscribednews/subscribednews.css" type="text/css" media="screen" />
     </span>
 </tal:newsitems>
