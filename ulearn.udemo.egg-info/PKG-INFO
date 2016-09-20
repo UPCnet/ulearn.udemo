@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: ulearn.udemo
-Version: 0.1
+Version: 0.2
 Summary: Basic Ulearn Demo
 Home-page: https://github.com/UPCnet/ulearn.udemo
 Author: paco Gregori
@@ -35,8 +35,8 @@ Description: ====================
         Changelog
         =========
         
-        1.0dev (unreleased)
-        -------------------
+        0.2 (2016-09-20)
+        ----------------
         
         - Initial release
         
