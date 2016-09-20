@@ -26,6 +26,7 @@
   <element value="ulearn.discussion"/>
   <element value="ulearn.video"/>
   <element value="FormFolder"/>
+  <element value="privateFolder"/>
  </property>
  <property name="behaviors">
   <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
