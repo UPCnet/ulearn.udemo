@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0dev (unreleased)
--------------------
+0.2 (2016-09-20)
+----------------
 
 - Initial release
