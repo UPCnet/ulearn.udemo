@@ -6,7 +6,7 @@ from zope.component import getMultiAdapter
 from zope.formlib import form
 from zope.interface import implements
 from zope import schema
-
+from plone import api
 from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
@@ -16,7 +16,9 @@ from plone.app.portlets.portlets import base
 from zope.component.hooks import getSite
 from plone.memoize.view import memoize_contextless
 from DateTime.DateTime import DateTime
-import Globals
+
+from souper.soup import get_soup
+from repoze.catalog.query import Eq
 
 
 class ISubscribedNewsPortlet(IPortletDataProvider):
@@ -94,14 +96,24 @@ class Renderer(base.Renderer):
         path = portal_state.navigation_root_path()
         limit = self.data.count
         state = self.data.state
-        tags = ['Corporativo', 'Ferrer', 'Producto']
-        news += self.get_news(context, state, path, limit, tags)
-        for newObject in news:
-            if newObject not in news_filtered and newObject['subject'] is not ():
-                news_filtered.append(newObject)
 
-        newsSorted = sorted(news_filtered, key=lambda new: new['date'], reverse=True)
-        return newsSorted
+        portal = getSite()
+        current_user = api.user.get_current()
+        userid = current_user.id
+
+        soup_tags = get_soup('user_subscribed_tags', portal)
+        tags_soup = [r for r in soup_tags.query(Eq('id', userid))]
+        if tags_soup:
+            tags = tags_soup[0].attrs['tags']
+            news += self.get_news(context, state, path, limit, tags)
+            for newObject in news:
+                if newObject not in news_filtered and newObject['subject'] is not ():
+                    news_filtered.append(newObject)
+
+            newsSorted = sorted(news_filtered, key=lambda new: new['date'], reverse=True)
+            return newsSorted
+        else:
+            return []
 
     def get_news(self, context, state, path, limit, tags):
         catalog = getToolByName(context, 'portal_catalog')
@@ -114,7 +126,7 @@ class Renderer(base.Renderer):
                               sort_on='created',
                               sort_order='reverse',
                               sort_limit=limit,
-                              subject=tag)
+                              Subject=tag)
             noticies = self.dades(results)
             for item in noticies:
                 yield item
