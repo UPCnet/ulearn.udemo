@@ -31,7 +31,7 @@ setup(name='ulearn.udemo',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'bleach==1.4',
+          'bleach==3.3.0',
           'bs4',
       ],
       extras_require={'test': ['plone.app.testing',
